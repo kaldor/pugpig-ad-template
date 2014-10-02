@@ -21,16 +21,15 @@ Our single image template can be used if only a single ad creative is supplied.
 
 For ad images in our multiple-images template we have specified dimensions below targeted for Apple iPhone and iPad devices. These are normally considered hero devices for ad creatives. On any other device or screen size including Android, Windows or Web the image will scale and letterbox appropriately.
 
-* ‘tablet-landscape’ now referred as ‘large-landscape’ - 4:3 aspect ratio / 2048 x 1536 
+* ‘tablet-landscape’ now referred as ‘large-landscape’ - 4:3 aspect ratio / 2048 x 1536
 * ‘tablet-portrait’ now referred as ‘large-portrait’ - 3:4 aspect ratio / 1536 x 2048 or 768
-
 * ‘phone-landscape’ now referred as ‘small-landscape’ - 16:9 aspect ratio / 1136 x 640
 * ‘phone-portrait’ now referred as ‘small-landscape’ - 9:16 aspect ratio / 640 x 1136
 
 Every image above should have a 128px top unsafe zone to avoid important elements of the ad hidden by the iOS toolbar (which has some transparency).
 
 
-![]( IMAGE URL HERE )
+![](https://raw.githubusercontent.com/kaldor/pugpig-ad-template/master/readme-image.png)
 
 These unsafe zones are only relevant when the image is shown at actual size.
 If the safe zones can’t be adhered in the ad creative then you can do the following:
