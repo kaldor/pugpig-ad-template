@@ -1,0 +1,80 @@
+@-ms-viewport {
+  width: device-width
+}
+@-o-viewport {
+  width: device-width
+}
+@viewport {
+  width: device-width
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  background-color: white;
+}
+
+a {
+  -webkit-touch-callout: none;
+}
+
+.preload {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.link {
+  display: block;
+}
+
+.link,
+.image {
+  height: inherit;
+}
+
+.image {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Small portrait */
+@media only screen and (max-width: 569px) and (orientation: portrait) {
+  .image {
+    background-image: url(small-portrait.png);
+  }
+}
+
+/* Small landscape */
+@media only screen and (max-width: 569px) and (orientation: landscape) {
+  .image {
+    background-image: url(small-landscape.png);
+  }
+}
+
+/* Wide portrait */
+@media only screen and (min-width: 570px) and (orientation: portrait) {
+  .image {
+    background-image: url(large-portrait.png);
+  }
+}
+
+/* Wide landscape */
+@media only screen and (min-width: 570px) and (orientation: landscape) {
+  .image {
+    background-image: url(large-landscape.png);
+  }
+}
