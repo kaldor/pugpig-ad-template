@@ -1,0 +1,105 @@
+<html class="no-js" lang="en">
+  <head>
+    <title>Pugpig DFP Advert example</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="delaySnapshotUntilReady" content="yes">
+    <meta name="callbackWhenSnapshotFinished" content="PUGPIG.snapshotFinished">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- pugpig snapshot script -->
+    <script>
+      window.PUGPIG = {
+
+        inApp: window.location.protocol.toLowerCase().search(/http(s)?/)<0,
+
+        beforeSnapshotComponents: [],
+
+        afterSnapshotComponents: [],
+
+        init: function() {
+          this.initBeforeSnapshotComponents();
+          if (!this.inApp) {
+            this.snapshotFinished();
+          }
+        },
+
+        readySnapshot: function() {
+          var iframe = document.createElement("IFRAME");
+          iframe.setAttribute("src","pugpig://onPageReady");
+          document.documentElement.appendChild(iframe);
+          iframe.parentNode.removeChild(iframe);
+          iframe = null;
+        },
+
+        snapshotFinished: function() {
+          this.initAfterSnapshotComponents();
+        },
+
+        initBeforeSnapshotComponents: function() {
+          if (this.beforeSnapshotComponents.length === 0 ) {
+            this.readySnapshot();
+          } else {
+            this.beforeSnapshotComponents.forEach(function(initComponent) {
+              initComponent();
+            });
+          }
+        },
+
+        initAfterSnapshotComponents: function() {
+          this.afterSnapshotComponents.forEach(function(initComponent) {
+            initComponent();
+          });
+        }
+
+      };
+    </script>
+
+    <!-- DFP ad script -->
+    <script>
+      PUGPIG.afterSnapshotComponents.push(function() {
+
+        $.getScript("http://www.googletagservices.com/tag/js/gpt.js", function(data, textStatus, jqxhr) {
+
+          if (typeof googletag !== 'undefined') {
+            // TODO: replace XXX with your unique network code. The rest of this line is specific per client.
+            googletag.defineSlot('/XXX/{...}');
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+
+            $('#google-advert').html("<scr" + "ipt>googletag.display('google-advert');</scr"+"ipt>");
+          }
+
+        });
+
+      });
+    </script>
+
+
+  </head>
+  <body>
+
+    <h1>The advert if online:</h1>
+    <div class="advert" id="google-advert">
+    </div>
+
+    <h1>The advert if offline:</h1>
+    <div class="advert" id="google-advert">
+      <a href="http://google.com" class="advert__fallback-link" style="background-image: url('http://placehold.it/300x400');">
+        <img class="advert__fallback-image" src="http://placehold.it/300x400">
+      </a>
+    </div>
+
+    <script>
+      PUGPIG.beforeSnapshotComponents.push(function() {
+        PUGPIG.readySnapshot();
+      });
+    </script>
+    <script>
+      window.onload = function() {
+        PUGPIG.init();
+      };
+    </script>
+  </body>
+</html>
