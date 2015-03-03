@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>single-image</id>
+  <title>Single Image</title>
+  <updated>2015-03-02T00:00:00Z</updated>
+  <author>
+    <name>Kaldor Group</name>
+  </author>
+  
+  <entry>
+    <id>single-image.01</id>
+    <title>Single Image</title>
+    <updated>2015-03-02T00:00:00Z</updated>
+    <published>2015-03-02T00:00:00Z</published>
+    <summary>Single image page</summary>
+    <link rel="alternate" type="text/html" href="index.html"/>
+    <link rel="related" type="text/cache-manifest" href="assets.manifest"/>
+  </entry>
+</feed>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opds="http://opds-spec.org/2010/catalog">
+
+  <id>com.kaldorgroup.pugpig-ad-template</id>
+  <title>Pugpig Ad Template</title>
+  <updated>2015-03-02T00:00:00Z</updated>
+  <author>
+    <name>Kaldor Group</name>
+  </author>
+
+  <entry>
+    <title>Multiple Images</title>
+    <id>multiple-images</id>
+    <updated>2015-03-02T00:00:00Z</updated>
+    <dcterms:issued>2015-03-02T00:00:00Z</dcterms:issued>
+    <author>
+      <name>Kaldor Group</name>
+    </author>
+    <summary>Multiple Ads Images Edition</summary>
+    <link rel="http://opds-spec.org/image" type="image/jpg" href="multiple-images/large-portrait.png"/>
+    <link rel="http://opds-spec.org/acquisition" type="application/atom+xml" href="multiple-images/atom.xml"/>
+    <link rel="alternate" type="application/atom+xml" href="multiple-images/atom.xml"/>
+  </entry>
+
+  <entry>
+    <title>Single Image</title>
+    <id>single-image</id>
+    <updated>2015-03-02T00:00:00Z</updated>
+    <dcterms:issued>2015-03-02T00:00:00Z</dcterms:issued>
+    <author>
+      <name>Kaldor Group</name>
+    </author>
+    <summary>Single Ad Image Edition</summary>
+    <link rel="http://opds-spec.org/image" type="image/jpg" href="single-image/image.png"/>
+    <link rel="http://opds-spec.org/acquisition" type="application/atom+xml" href="single-image/atom.xml"/>
+    <link rel="alternate" type="application/atom+xml" href="single-image/atom.xml"/>
+  </entry>
+</feed>
