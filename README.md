@@ -24,7 +24,7 @@ For ad images in our multiple-images template we have specified dimensions below
 * ‘tablet-landscape’ now referred as ‘large-landscape’ - 4:3 aspect ratio / 2048 x 1536
 * ‘tablet-portrait’ now referred as ‘large-portrait’ - 3:4 aspect ratio / 1536 x 2048 or 768
 * ‘phone-landscape’ now referred as ‘small-landscape’ - 16:9 aspect ratio / 1136 x 640
-* ‘phone-portrait’ now referred as ‘small-landscape’ - 9:16 aspect ratio / 640 x 1136
+* ‘phone-portrait’ now referred as ‘small-portrait’ - 9:16 aspect ratio / 640 x 1136
 
 Every image above should have a 128px top unsafe zone to avoid important elements of the ad hidden by the iOS toolbar (which has some transparency).
 
