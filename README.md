@@ -50,3 +50,38 @@ If you want to use .jpgs over .pngs you will need to change image paths referenc
 
 ### Manifest
 Your ad should have a cache manifest file. 
+
+### AD INSTRUCTIONS
+
+	- Download github .zip here - https://github.com/kaldor/pugpig-ad-template
+	- Unzip folder and choose 'single-image' or 'multiple-image' folder dependant on ad assets provided.
+	
+	For single-image:
+	- Save advert asset for web (optimised png or jpg file 1536px maximum)
+	- Rename asset to the image name used in 'single-image' folder e.g image.png (note the extension should match .jpg or .png) replace in the folder*
+	- Open the index.html file with a text editor like Sublime (http://www.sublimetext.com/)
+	- Edit line 22 <a href="http://www.pugpig.com/" class="link"> - remove the line (including the closing </a> tag on line 24) or insert an appropriate URL (this will open when user taps on ad image)
+	- Optional Open the style.css file in sublime and change body background colour (line 25) if you want to change it from white to something more suited to your advertorial image e.g black.
+	- save the changes, close the files and zip up the folder
+
+	The process is the same for multiple images except it should be done in the multiple-images folder and it should contain 4 images instead of 1.
+
+	In Wordpress:
+	- log into your wordpress cms > select Ad Bundles and create new - give it a title, upload the zip, tag to an edition save and preview
+	- edit the edition and drag the advert placement to preferred order
+
+	In Drupal:
+	- log into your drupal cms > select content > Add content > Ad Package - give it a title, upload the zip, tag to an edition save and preview
+	- edit the edition and drag the advert placement to preferred order
+
+	* Note: If you want to use a If you want to use .jpgs over .pngs you will need to change image paths references in the following files:
+	- assets.manifest
+	- index.html
+	- style.css
+
+
+
+
+
+
+
