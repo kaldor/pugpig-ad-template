@@ -10,12 +10,13 @@ Our ad templates are designed and built to be 100% responsive and work across al
 
 ### Templates
 
-We provide two templates:
+We provide three template options:
 * multiple-images
-* single-image
+* single-image - fit height (default with letterboxing / no scroll)
+* single-image - fit width (scroll)
 
 Our multiple images template expects four image assets to best target all devices and orientations.
-Our single image template can be used if only a single ad creative is supplied.
+Our single image templates can be used if only a single ad creative is supplied.
 
 ### Image Dimensions and Safe Zones 
 
@@ -41,6 +42,7 @@ body { padding-top: 0; } to body { padding-top: 64; } (line 13)
 This isn’t ideal however because top-padding will display across all devices including Android when it isn’t necessary.
 
 For our single image ad template the image can be any size and aspect ratio.
+You can choose if you want this to fit the device height at all times so no scroll to view (this is the default index.html file) or the other option is to choose the fit width (use fit-width.html rename to index.html) which scales image to fit the device width creating a scrollable page. This keeps the artwork and content quite large and the insitital is more similar to your other page layouts in an edition. 
 
 If you want to use .jpgs over .pngs you will need to change image paths references in the following places:
 
